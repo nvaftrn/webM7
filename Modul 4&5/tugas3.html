@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Data Fasilitas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .form-container input, 
+    .form-container textarea, 
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Tambah Data Fasilitas</h2>
+    <form id="facilityForm">
+      <label for="facilityName">Nama Fasilitas</label>
+      <input type="text" id="facilityName" placeholder="Masukkan nama fasilitas" required>
+
+      <label for="facilityDescription">Deskripsi Fasilitas</label>
+      <textarea id="facilityDescription" rows="4" placeholder="Masukkan deskripsi fasilitas" required></textarea>
+
+      <button type="submit">Simpan</button>
+      <p class="error" id="errorMessage"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('facilityForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const facilityName = document.getElementById('facilityName').value.trim();
+      const facilityDescription = document.getElementById('facilityDescription').value.trim();
+      const errorMessage = document.getElementById('errorMessage');
+
+      if (!facilityName || !facilityDescription) {
+        errorMessage.innerText = 'Semua bidang harus diisi!';
+        return;
+      }
+
+      if (facilityName.length < 3) {
+        errorMessage.innerText = 'Nama fasilitas harus lebih dari 2 karakter!';
+        return;
+      }
+
+      if (facilityDescription.length < 10) {
+        errorMessage.innerText = 'Deskripsi fasilitas harus lebih dari 10 karakter!';
+        return;
+      }
+
+      errorMessage.innerText = '';
+      alert('Data fasilitas berhasil disimpan!');
+      document.getElementById('facilityForm').reset();
+    });
+  </script>
+</body>
+</html>
+

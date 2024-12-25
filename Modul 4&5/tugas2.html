@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Data Kamar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .form-container input, 
+    .form-container textarea, 
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Tambah Data Kamar</h2>
+    <form id="roomForm">
+      <label for="roomNumber">Nomor Kamar</label>
+      <input type="text" id="roomNumber" placeholder="Masukkan nomor kamar" required>
+
+      <label for="roomType">Tipe Kamar</label>
+      <input type="text" id="roomType" placeholder="Masukkan tipe kamar (Contoh: Deluxe)" required>
+
+      <label for="price">Harga per Malam (Rp)</label>
+      <input type="number" id="price" placeholder="Masukkan harga per malam" required>
+
+      <label for="facilities">Fasilitas</label>
+      <textarea id="facilities" rows="4" placeholder="Masukkan fasilitas kamar" required></textarea>
+
+      <button type="submit">Simpan</button>
+      <p class="error" id="errorMessage"></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('roomForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const roomNumber = document.getElementById('roomNumber').value.trim();
+      const roomType = document.getElementById('roomType').value.trim();
+      const price = document.getElementById('price').value.trim();
+      const facilities = document.getElementById('facilities').value.trim();
+      const errorMessage = document.getElementById('errorMessage');
+
+      if (!roomNumber || !roomType || !price || !facilities) {
+        errorMessage.innerText = 'Semua bidang harus diisi!';
+        return;
+      }
+
+      if (isNaN(price) || price <= 0) {
+        errorMessage.innerText = 'Harga harus berupa angka positif!';
+        return;
+      }
+
+      errorMessage.innerText = '';
+      alert('Data kamar berhasil disimpan!');
+      document.getElementById('roomForm').reset();
+    });
+  </script>
+</body>
+</html>

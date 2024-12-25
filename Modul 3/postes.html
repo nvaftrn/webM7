@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Halaman Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            display: flex;
+            border: 2px solid #333;
+            width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gambar {
+            width: 30%;
+            border: 1px solid #333;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #e6e6e6;
+        }
+
+        .gambar img {
+            width: 100%;
+            height: auto;
+        }
+
+        .konten {
+            width: 70%;
+        }
+
+        .judul {
+            border: 1px solid #333;
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+
+        .potongan-artikel {
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .baca-selengkapnya {
+            text-align: right;
+            padding: 10px;
+            font-size: 14px;
+            color: #0066cc;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        .baca-selengkapnya:hover {
+            color: #004a99;
+            text-decoration: underline;
+        }
+
+        .selengkapnya {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #333;
+            margin-top: 10px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gambar">
+            <img src="foto.jpeg" alt="Gambar">
+        </div>
+        <div class="konten">
+            <div class="judul">Nova Fitriani</div>
+            <div class="potongan-artikel">
+                Teknik Informatika
+                <div class="selengkapnya" id="selengkapnya">
+                    Nova Fitriani adalah mahasiswa jurusan Teknik Informatika yang memiliki minat besar dalam bidang pengembangan perangkat lunak dan kecerdasan buatan. Ia telah terlibat dalam berbagai proyek kolaboratif yang melibatkan pemrograman, data analisis, dan desain antarmuka pengguna.
+                </div>
+            </div>
+            <div class="baca-selengkapnya" onclick="tampilkanSelengkapnya()">Baca Selengkapnya</div>
+        </div>
+    </div>
+
+    <script>
+        function tampilkanSelengkapnya() {
+            const selengkapnya = document.getElementById("selengkapnya");
+            if (selengkapnya.style.display === "none") {
+                selengkapnya.style.display = "block";
+            } else {
+                selengkapnya.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

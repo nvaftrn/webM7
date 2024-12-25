@@ -1,0 +1,10 @@
+body {
+    background-color: blue;
+}
+
+.text-container {
+    color: green;
+    font-family: "Monotype Corsiva", cursive;
+    text-align: left;
+    padding: 20px;
+}
