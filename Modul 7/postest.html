@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Anggota</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Data Anggota</h1>
+        <form class="mt-4">
+            <!-- Input Data Anggota -->
+            <div class="mb-3">
+                <label for="kodeAnggota" class="form-label">Kode Anggota</label>
+                <input type="text" class="form-control" id="kodeAnggota" placeholder="Masukkan Kode Anggota">
+            </div>
+            <div class="mb-3">
+                <label for="nim" class="form-label">NIM</label>
+                <input type="text" class="form-control" id="nim" placeholder="Masukkan NIM">
+            </div>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama">
+            </div>
+            <div class="mb-3">
+                <label for="prodi" class="form-label">Program Studi</label>
+                <select class="form-select" id="kelas">
+                    <option value="TI">Teknik Informatika (TI)</option>
+                    <option value="SI">Sistem Informasi (SI)</option>
+                    <option value="DKV">Desain Komunikasi Visual (DKV)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="kelas" class="form-label">Kelas</label>
+                <input type="text" class="form-control" id="kelas" placeholder="Masukkan Kelas">
+            </div>
+            <div class="mb-3">
+                <label for="jenisKelamin" class="form-label">Jenis Kelamin</label>
+                <select class="form-select" id="jenisKelamin">
+                    <option value="Laki-Laki">Laki-Laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="noTelp" class="form-label">No. Telepon</label>
+                <input type="text" class="form-control" id="noTelp" placeholder="Masukkan No. Telepon">
+            </div>
+            <div class="mb-3">
+                <label for="foto" class="form-label">Foto</label>
+                <input type="file" class="form-control" id="foto">
+            </div>
+            <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat</label>
+                <textarea class="form-control" id="alamat" rows="3" placeholder="Masukkan Alamat"></textarea>
+            </div>
+            <!-- Tombol Simpan -->
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+    </div>
+    <script src=""></script>
+</body>
+</html>

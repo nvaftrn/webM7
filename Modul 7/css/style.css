@@ -1,0 +1,31 @@
+/* Gaya untuk link navigasi */
+.nav-link {
+    font-family: Impact, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+  
+  /* Hover effect untuk link navigasi */
+  .nav-link:hover {
+    color: rgb(182, 215, 243);
+  }
+  
+  /* Gaya untuk Jumbotron */
+  .jumbotron {
+    background-image: url("../img/gedungFkom.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+  }
+  
+  /* Gaya tambahan untuk resolusi layar besar */
+  @media (min-width: 992px) {
+    .nav-link {
+      font-family: Impact, sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-right: 30px;
+    }
+  }
+  

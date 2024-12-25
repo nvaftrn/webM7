@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan dan Menyembunyikan Gambar</title>
+    <script src="../Modul 6/jquery-3.7.1.js"></script>
+    <style>
+        img {
+            max-width: 300px;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <button id="show">Tampilkan Gambar</button>
+    <button id="hide">Sembunyikan Gambar</button>
+    <img id="image" src="../Modul 6/img/gojo.jpg" alt="Gojo Satoru">
+    
+    <script>
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("#image").show(); 
+            });
+
+            $("#hide").click(function () {
+                $("#image").hide(); 
+            });
+        });
+    </script>
+</body>
+</html>

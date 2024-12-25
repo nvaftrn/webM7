@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL JAYA</title>
+    <style>
+  
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            display: none;
+            top: 0;
+            left: 100%;
+            margin-left: 0.1rem;
+            margin-top: -0.1rem;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: block;
+  
+        }
+
+        .logo {
+            width: 450px; 
+            height: 150px;
+           // margin-left: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header d-flex justify-content-between align-items-center px-3">
+        <h1 class="me-auto" >HOTEL KUTA BEACH</h1>
+        <img src="img/hotel2.webp" alt="Logo Hotel" class="logo" >
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kamar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fasilitasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fasilitas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="fasilitasDropdown">
+                            <li><a class="dropdown-item" href="#">Petualangan Alam</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Kolam Renang</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Sumber Air Panas</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item" href="#">Kolam Anak & Dewasa</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Reguler</a></li>
+                                            <li><a class="dropdown-item" href="#">Premium</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Pusat Kebugaran</a></li>
+                            <li><a class="dropdown-item" href="#">Ruang Rapat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pesan Sekarang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- LEFT BAR -->
+            <aside class="col-md-3 bg-light p-3">
+ 
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/d_7c3jDJCCA?si=XNnlt0XZ4_XrJiPd" title="Video 1"></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/_E3IdfCTPkw?si=jH4jI_Y7c8mEW1kC" title="Video 2" class="mt-3"></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/_E3IdfCTPkw?si=jH4jI_Y7c8mEW1kC" title="Vi0deo 3" class="mt-3"></iframe>
+            </aside>
+
+            <!-- KONTEN -->
+            <main class="col-md-9 p-3">
+      
+                <div class="row g-2">
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif"class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                    <div class="col-md-4"><img src="img/hotel1.avif" class="img-fluid rounded" alt="Gambar 1"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p> © 2024 HOTEL JAYA. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

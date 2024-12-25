@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi jQuery</title>
+    <script src="../Modul 6/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div id="fakultas">FKOM</div>
+    <input type="text" id="universitas" value="UNIKU">
+    <button id="change">Ubah</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#change").click(function () {
+                $("#fakultas").text("Fakultas Ilmu Komputer"); 
+                $("#universitas").val("Universitas Kuningan"); 
+            });
+        });
+    </script>
+</body>
+</html>
