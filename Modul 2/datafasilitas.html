@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Fasilitas</title>
+    <style>
+        body {
+             background-color: #1d60c4;
+            color: #333;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #31d9ec;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 35%; 
+            font-size: 14px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 60%; 
+            padding: 5px;
+            font-size: 14px;
+        }
+        .form-actions .btn-save {
+        background-color: #007bff;
+        color: #fff;
+    }
+    .form-actions .btn-cancel {
+        background-color: #ffc107;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tambah Data Fasilitas</h2>
+<form action="/tambah_fasilitas" method="post">
+        <div class="form-group">
+            <label for="id">ID Fasilitas:</label>
+    <input type="text" id="id" name="id" required>
+        </div>
+        <div class="form-group">
+            <label for="nama">Nama Fasilitas:</label>
+    <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="harga_weekend">Harga Weekend:</label>
+    <input type="number" id="harga_weekend" name="harga_weekend" required>
+        </div>
+        <div class="form-group">
+            <label for="harga_weekday">Harga Weekday:</label>
+    <input type="number" id="harga_weekday" name="harga_weekday" required>
+        </div>
+        <div class="form-group">
+            <label for="kuota">Kuota:</label>
+    <input type="number" id="kuota" name="kuota" required>
+        </div>
+        <div class="form-group">
+            <label for="jam_buka">Jam Buka:</label>
+    <input type="time" id="jam_buka" name="jam_buka" required>
+        </div>
+        <div class="form-group">
+            <label for="jam_tutup">Jam Tutup:</label>
+            <input type="time" id="jam_tutup" name="jam_tutup" required>
+        </div>
+    <div class="form-group">
+        <label for="deskripsi_fasilitas">Deskripsi Fasilitas:</label>
+<input type="deskripsi" id="deskripsi_fasilitas" name="deskripsi_fasilitas"  required><br/>
+    </div>
+        <div class="form-actions">
+            <button type="submit" class="btn-save">Simpan</button>
+            <button type="button" class="btn-cancel">Batal</button>
+            <a href="datakamar.html" > <input type="button" class="btn-save" value="Data Kamar">
+        </div>
+    </form>
+</div>
+        </div>
+    </div>
+</body>
+</html>
+
+

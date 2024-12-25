@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chizyy Best Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5969e2;
+        }
+        header {
+            background-color: #0414a3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .leftbar {
+            width: 25%;
+            padding-right: 20px;
+        }
+        .content {
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding-left: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: 0;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        /* Dropdown menu styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CHIZYY BEST HOTEL</h1>
+        <p>Mewah dan Berkelas</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Kamar</a>
+        <div class="dropdown">
+            <a href="#">Fasilitas</a>
+            <div class="dropdown-content">
+                <a href="#">Petualangan Alam</a>
+                <a href="#">Kolam Renang</a>
+                <div class="dropdown">
+                    <a href="#">Sumber Air Panas</a>
+                    <a href="#">Kolam Anak & Dewasa</a>
+                    <a href="#">Pusat Kebugaran</a>
+                    <a href="#">Ruang Rapat</a>
+                    <div class="dropdown-content">
+                        <a href="#">Reguler</a>
+                        <a href="#">Premium</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#">Pesan Sekarang</a>
+    </nav>
+    <div class="container">
+        <div class="leftbar">
+            <h2>Tour Virtual</h2>
+            <iframe src="https://www.youtube.com/embed/gxf_h3b_8ks?si=Jo2yljbAToLxqREH" ></iframe>
+            <iframe src="https://www.youtube.com/embed/4g4JhbgCZT0?si=j9XSv54Taol-6KDO" ></iframe>
+            <iframe src="https://www.youtube.com/embed/7vTRXLMGCXo?si=gebF2Jmyx_pcz-lM"></iframe>
+        </div>
+        <div class="content">
+            <h2>Galeri Fasilitas</h2>
+            <iframe src="foto1.jpg" title="Foto Kamar 1"></iframe>
+            <iframe src="foto2.jpg" title="Foto Kamar 2"></iframe>
+            <iframe src="foto3.jpg" title="Foto Kamar 3"></iframe>
+            <iframe src="foto4.jpg" title="Foto Kamar 4"></iframe>
+            <iframe src="foto5.jpg" title="Foto Kamar 5"></iframe>
+            <iframe src="foto6.jpg" title="Foto Kamar 6"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 CHIZY Best Hotel | All rights reserved</p>
+    </footer>
+</body>
+</html>
+
